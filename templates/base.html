@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/main.css">
+    <title>{% block title %}DB for Books{% endblock %}</title>
+</head>
+
+<body>
+    {% block content %}
+    <header>
+        <div class="head_text">Books DB</div>
+    </header>
+
+    <center>
+        <div class="form_container">
+            <!--forms for our book db-->
+            <form action="{{url_for('create_book')}}" method="POST">
+                <div>
+                    <label for="username">Username</label><br />
+                    <input type="text" name="username" id="username" />
+                </div>
+                <div style="margin-top:8px;">
+                    <label for="title">Title</label><br />
+                    <input type="text" name="title" id="title" />
+                </div>
+                <div style="margin-top:8px;">
+                    <label for="author">Author</label><br />
+                    <input type="text" name="author" id="author" />
+                </div>
+                <div style="margin-top:12px; float:right;">
+                    <button type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </center>
+
+    <center>
+        <div class="table_container">
+            <!--make table for books db-->
+            <table>
+                <thead>
+                    <th>UserName</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                </thead>
+                <tbody>
+                    {% for post in posts %}
+                    <tr>
+                        <td>{{post.username}}</td>
+                        <td>{{post.title}}</td>
+                        <td>{{post.author}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </center>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+body {
+	background: #fff;
+}
+header {
+	width: 100%;
+	position: absolute;
+	background: indigo;
+	left: 0;
+	top: 0;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	color: #fff;
+	z-index: 9999;
+}
+.head_text {
+	padding-left: 30px;
+	font-family: sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+}
+
+.form_container {
+	margin-top: 120px;
+	width: 50%;
+	text-align: left;
+}
+label {
+	font-weight: 500;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+input {
+	width: 100%;
+	padding: 12px 16px;
+	margin-top: 8px;
+	font-family: sans-serif;
+	font-size: 16px;
+	color: rgb(73, 71, 71);
+}
+input:focus {
+	outline: none;
+}
+
+button {
+	background: indigo;
+	color: #fff;
+	padding: 10px 14px;
+	border-radius: 6px;
+	border: 0px;
+	font-weight: 500;
+	font-size: 19px;
+	font-family: sans-serif;
+	cursor: pointer;
+}
+
+table {
+	margin-top: 120px;
+	width: 60%;
+	font-weight: 500;
+	font-family: sans-serif;
+	text-align: left;
+	border: 1px solid gray;
+}
+th {
+	text-align: center;
+	padding: 12px 0px;
+	border: 1px solid blue;
+}
+tr {
+	border: 1px solid gray;
+	font-size: 14px;
+	text-align: center;
+}
+td {
+	padding: 12px;
+	border: 1px solid gray;
+}
